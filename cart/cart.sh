@@ -11,7 +11,7 @@ echo "Creating APP directory"
 mkdir /app
 
 echo "Downloading and extracting cart component content"
-curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip  && cd /app  && unzip /tmp/cart.zip
+curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip  && cd /app  && unzip /tmp/cart.zip
 
 echo "Installing NodeJS dependencies"
 cd /app  &&  npm install
