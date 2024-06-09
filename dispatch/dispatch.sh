@@ -8,7 +8,7 @@ echo "Creating APP directory"
 mkdir /app
 
 echo "Downloading and extracting dispatch component content"
-curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch.zip  && cd /app  && unzip /tmp/dispatch.zip
+curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch.zip  && cd /app  && unzip /tmp/dispatch.zip
 
 echo "Downloading dependencies"
 cd /app  &&  go mod init dispatch && go get && go build
