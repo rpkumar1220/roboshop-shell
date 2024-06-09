@@ -15,7 +15,7 @@ echo "downloading dependencies"
 cd /app  && pip3.6 install -r requirements.txt
 
 echo "Copying payment service file"
-cp /home/centos/roboshop-shell/cart/payment.service /etc/systemd/system/payment.service
+cp /home/centos/roboshop-shell/payment/payment.service /etc/systemd/system/payment.service
 
 echo "Reloading Daemon"
 systemctl daemon-reload

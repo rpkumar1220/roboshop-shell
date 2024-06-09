@@ -17,7 +17,7 @@ echo "Downloading  dependencies and building the application"
 cd /app &&  mvn clean package && mv target/shipping-1.0.jar shipping.jar
 
 echo "Copying shipping service file"
-cp /home/centos/roboshop-shell/cart/shipping.service /etc/systemd/system/shipping.service
+cp /home/centos/roboshop-shell/shipping/shipping.service /etc/systemd/system/shipping.service
 
 echo "Reloading Daemon"
 systemctl daemon-reload

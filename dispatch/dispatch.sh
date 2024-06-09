@@ -14,7 +14,7 @@ echo "Downloading dependencies"
 cd /app  &&  go mod init dispatch && go get && go build
 
 echo "Copying dispatch service file"
-cp /home/centos/roboshop-shell/cart/dispatch.service /etc/systemd/system/dispatch.service
+cp /home/centos/roboshop-shell/dispatch/dispatch.service /etc/systemd/system/dispatch.service
 
 echo "Reloading Daemon"
 systemctl daemon-reload
