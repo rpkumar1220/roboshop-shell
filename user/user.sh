@@ -17,7 +17,7 @@ echo "Installing NodeJS dependencies"
 cd /app  &&  npm install
 
 echo "Copying cart service file"
-cp /home/centos/cart/user.service /etc/systemd/system/user.service
+cp /home/centos/roboshop-shell/cart/user.service /etc/systemd/system/user.service
 
 echo "Reloading Daemon"
 systemctl daemon-reload

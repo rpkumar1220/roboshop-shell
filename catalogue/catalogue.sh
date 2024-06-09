@@ -23,7 +23,7 @@ echo "Enabling and restarting catalogue service"
 systemctl enable catalogue && systemctl start catalogue
 
 echo "setting up mongodb repo"
-cp /home/centos/mongodb/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /home/centos/roboshop-shell/mongodb/mongo.repo /etc/yum.repos.d/mongo.repo
 
 echo "Installing mongodb client"
 dnf install mongodb-org-shell -y
