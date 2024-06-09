@@ -8,7 +8,7 @@ echo "Creating APP directory"
 mkdir /app
 
 echo "Downloading and extracting payment component content"
-curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip  && cd /app  && unzip /tmp/payment.zip
+curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip  && cd /app  && unzip /tmp/payment.zip
 
 
 echo "downloading dependencies"
