@@ -11,7 +11,7 @@ echo "Creating APP directory"
 mkdir /app
 
 echo "Downloading and extracting shipping component content"
-curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip  && cd /app  && unzip /tmp/shipping.zip
+curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip  && cd /app  && unzip /tmp/shipping.zip
 
 echo "Downloading  dependencies and building the application"
 cd /app &&  mvn clean package && mv target/shipping-1.0.jar shipping.jar
