@@ -17,7 +17,7 @@ echo "Downloading NodeJS Dependencies"
 cd /app && npm install
 
 echo "Copying catalogue service file"
-cp /home/centos/roboshop-shell/cart/catalogue.service /etc/systemd/system/catalogue.service
+cp /home/centos/roboshop-shell/catalogue/catalogue.service /etc/systemd/system/catalogue.service
 
 echo "Reloading Daemon"
 systemctl daemon-reload
