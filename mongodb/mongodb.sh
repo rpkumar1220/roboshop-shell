@@ -1,15 +1,18 @@
-echo "Setting up mongo repo"
+source common.sh
+component=mongodb
+
+echo "${green}Setting up mongo repo ${close}"
 cp /home/centos/roboshop-shell/mongodb/mongo.repo /etc/yum.repos.d/mongo.repo
 
 
-echo "Installing MongoDB"
+echo "${yellow} Installing MongoDB ${close}"
 dnf install mongodb-org -y
 
-echo "Enabling and restarting mongod service"
+echo "${cyan} Enabling and restarting mongod service ${close}"
 systemctl enable mongod && systemctl start mongod
 
-echo "Updating the listening address"
+echo "${magenta} Updating the listening address ${close}"
 sed -i 's/127.0.0.1/0.0.0.0/'  /etc/mongod.conf
 
-echo "Restarting the mongod service"
-systemctl restart mongod
+echo "{${yellow} Restarting the mongod service ${close}"
+systemctl restart mongod 
