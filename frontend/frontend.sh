@@ -1,21 +1,24 @@
-echo "Installing the nginx server"
-dnf install nginx -y
+source common.sh
+component=frontend
 
-echo "Enabling and restarting nginx service"
+
+echo -e "${greeen} Installing the nginx server ${close}"
+dnf install nginx -y  
+
+echo -e "${yellow} Enabling and restarting nginx service ${close}"
 systemctl enable nginx && systemctl start nginx
 
-echo "Removing the default content from Index"
+echo -e "${red} Removing the default content from Index ${close}"
 rm -rf /usr/share/nginx/html/*
 
-echo "Downloading the frontend content"
-curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+echo -e "${blue} Downloading the ${component} content ${close}"
+curl -o /tmp/${component}.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip
 
-echo "Extracting the content"
-cd /usr/share/nginx/html  && unzip /tmp/frontend.zip
+echo -e "${magenta} Extracting the content ${close}"
+cd /usr/share/nginx/html  && unzip /tmp/${component}.zip
 
-echo "Copying the configuration file"
+echo -e "${cyan} Copying the configuration file ${close}"
 cp /home/centos/roboshop-shell/frontend/roboshop.conf  /etc/nginx/default.d/roboshop.conf
 
-echo "restarting the nginx server"
+echo -e "${yellow} restarting the nginx server ${close}"
 systemctl restart nginx
-
