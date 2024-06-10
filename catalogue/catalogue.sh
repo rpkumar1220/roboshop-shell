@@ -32,4 +32,4 @@ echo "Installing mongodb client"
 dnf install mongodb-org-shell -y
 
 echo "Loading the schema"
-mongo --host 172.31.20.224 </app/schema/catalogue.js
+mongo --host 172.31.21.133 </app/schema/catalogue.js

@@ -16,5 +16,3 @@ mysql_secure_installation --set-root-pass RoboShop@1
 echo "Checking the connection to DB"
 mysql -uroot -pRoboShop@1
 
-echo "Disconnecting from db"
-\q

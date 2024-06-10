@@ -30,7 +30,7 @@ echo "Installing mysql client"
 dnf install mysql -y
 
 echo "loading schema"
-mysql -h 172.31.19.254 -uroot -pRoboShop@1 < /app/schema/shipping.sql
+mysql -h 172.31.28.75 -uroot -pRoboShop@1 < /app/schema/shipping.sql
 
 echo "restarting shipping service"
 systemctl restart shipping
