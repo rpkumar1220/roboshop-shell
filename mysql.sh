@@ -1,20 +1,20 @@
 source common.sh
 
-echo "${red} Disabling the default mysql repo version ${close}"
+echo -e "${red} Disabling the default mysql repo version ${close}"
 dnf module disable mysql -y
 
-echo "${yellow} Copying mysql repo file ${close}"
+echo -e "${yellow} Copying mysql repo file ${close}"
 cp /home/centos/roboshop-shell/mysql.repo /etc/yum.repos.d/mysql.repo
 
-echo "${green} Installing MySql ${close}"
+echo -e "${green} Installing MySql ${close}"
 dnf install mysql-community-server -y
 
-echo "${yellow} Enabling and restarting mysql service ${close}"
+echo -e "${yellow} Enabling and restarting mysql service ${close}"
 systemctl enable mysqld && systemctl start mysqld
 
-echo "${magenta} Setting up password for mysql DB ${close}"
+echo -e "${magenta} Setting up password for mysql DB ${close}"
 mysql_secure_installation --set-root-pass RoboShop@1
 
-echo "${blue} Checking the connection to DB ${close}"
+echo -e "${blue} Checking the connection to DB ${close}"
 mysql -uroot -pRoboShop@1
 
