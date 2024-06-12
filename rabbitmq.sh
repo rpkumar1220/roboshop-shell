@@ -1,14 +1,16 @@
-echo "Configuring YUM repo from script vendor"
+source  common.sh
+
+echo "${cyan} Configuring YUM repo from script vendor ${close}"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
 
-echo "configuring yum repo for Rabbitmq"
+echo "${magenta} configuring yum repo for Rabbitmq ${close}"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
 
-echo "Installing Rabbitmq"
+echo "${green} Installing Rabbitmq ${close}"
 dnf install rabbitmq-server -y
 
-echo "Enabling and Starting rabbitmq service"
+echo "${yellow} Enabling and Starting rabbitmq service ${close}"
 systemctl enable rabbitmq-server && systemctl start rabbitmq-server
 
-echo "creating user and setting permissions"
+echo "${blue} creating user and setting permissions ${close}"
 rabbitmqctl add_user roboshop roboshop123 && rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"

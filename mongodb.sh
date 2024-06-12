@@ -2,7 +2,7 @@ source common.sh
 component=mongodb
 
 echo "${green}Setting up mongo repo ${close}"
-cp /home/centos/roboshop-shell/mongodb/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
 
 
 echo "${yellow} Installing MongoDB ${close}"

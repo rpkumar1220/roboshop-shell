@@ -18,7 +18,7 @@ echo -e "${magenta} Extracting the content ${close}"
 cd /usr/share/nginx/html  && unzip /tmp/${component}.zip
 
 echo -e "${cyan} Copying the configuration file ${close}"
-cp /home/centos/roboshop-shell/frontend/roboshop.conf  /etc/nginx/default.d/roboshop.conf
+cp /home/centos/roboshop-shell/roboshop.conf  /etc/nginx/default.d/roboshop.conf
 
 echo -e "${yellow} restarting the nginx server ${close}"
 systemctl restart nginx
