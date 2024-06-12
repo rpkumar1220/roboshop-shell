@@ -76,9 +76,15 @@ maven(){
 
   conf
   service
-  mongodb_setup
 
-  echo -e "restarting shipping service"
+  echo -e "${green} Installing mysql ${close}"
+  dnf install mysql -y
+
+  echo -e "${yellow} schema loading ${close}"
+  mysql -h 172.31.17.184 -uroot -pRoboShop@1 < /app/schema/shipping.sql
+
+
+  echo -e "${yellow} restarting shipping service ${close}"
   systemctl restart ${component}
 }
 
