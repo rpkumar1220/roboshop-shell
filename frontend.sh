@@ -2,7 +2,7 @@ source common.sh
 component=frontend
 
 
-echo -e "${greeen} Installing the nginx server ${close}"
+echo -e "${green} Installing the nginx server ${close}"
 dnf install nginx -y  
 
 echo -e "${yellow} Enabling and restarting nginx service ${close}"
