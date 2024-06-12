@@ -1,10 +1,10 @@
-red=\e[31m
-green=\e[32m
-yellow=\e[33m
-blue=\e[34m
-magenta=\e[36m
-cyan=\e[36m
-close=\e[0m
+red="\e[31m"
+green="\e[32m"
+yellow="\e[33m"
+blue="\e[34m"
+magenta="\e[36m"
+cyan="\e[36m"
+close="\e[0m"
 
 
 
