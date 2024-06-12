@@ -61,7 +61,7 @@ mongodb_setup(){
     dnf install mongodb-org-shell -y
 
     echo "${yellow} Loading the schema ${close}"
-    mongo --host 172.31.28.173 </app/schema/catalogue.js
+    mongo --host 172.31.27.147 </app/schema/catalogue.js
 }
 
 
