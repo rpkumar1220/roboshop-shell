@@ -6,7 +6,7 @@ magenta="\e[36m"
 cyan="\e[36m"
 close="\e[0m"
 
-user_id= ${id -u}
+user_id=${id -u}
 
 log_file="/tmp/robo_shell.log"
 
@@ -15,8 +15,8 @@ set_hostname(){
 }
 
 
-if [ ${user_id} -ne 0 ]; then
-  echo -e "${red} Script should run with root user"
+if [ $user_id -ne 0 ]; then
+  echo -e "${red} Script should run with root user ${close}"
   exit 1
 fi
 
