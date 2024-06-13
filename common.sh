@@ -8,7 +8,7 @@ close="\e[0m"
 
 user_id= ${id -u}
 
-lof_file="/tmp/robo_shell.log"
+log_file="/tmp/robo_shell.log"
 
 set_hostname(){
   set-hostname ${component}
