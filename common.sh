@@ -61,7 +61,7 @@ mongodb_setup(){
     dnf install mongodb-org-shell -y
 
     echo -e "${yellow} Loading the schema ${close}"
-    mongo --host 172.31.27.147 </app/schema/catalogue.js
+    mongo --host 172.31.92.161 </app/schema/catalogue.js
 }
 
 
@@ -81,7 +81,7 @@ maven(){
   dnf install mysql -y
 
   echo -e "${yellow} schema loading ${close}"
-  mysql -h 172.31.17.184 -uroot -pRoboShop@1 < /app/schema/shipping.sql
+  mysql -h 172.31.84.179 -uroot -pRoboShop@1 < /app/schema/shipping.sql
 
 
   echo -e "${yellow} restarting shipping service ${close}"
