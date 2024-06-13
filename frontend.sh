@@ -12,7 +12,7 @@ systemctl enable nginx &>> ${log_file}
  stat_check $?
 
 echo -e "${red} Removing the default content from Index ${close}"
-rm -rf /usr/share/nginx/html/* &>> ${log_file}
+rm -rf /usr/share/nginx/html/*  &>> ${log_file}
 stat_check $?
 
 echo -e "${blue} Downloading the ${component} content ${close}"
